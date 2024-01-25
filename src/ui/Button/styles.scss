@@ -1,0 +1,45 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+
+    
+    &.blue>* {
+        color: var(--blue);
+    }
+    
+    &.red>* {
+        color: var(--red);
+    }
+
+    &.gray>* {
+        color: var(--gray-light);
+    }
+    
+    &:hover,
+    &:not(.active) {
+        border: var(--gray-lighter) 3px solid;
+    }
+
+    &.active {
+        &>* {
+            color: var(--white);
+        }
+
+        &.blue {
+            background: var(--blue);
+        }
+
+        &.red {
+            background: var(--red);
+        }
+
+        &.gray {
+            background: var(--gray-light);
+        }
+    }
+}

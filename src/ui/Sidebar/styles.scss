@@ -1,0 +1,45 @@
+.sidebar {
+    width: 110px;
+    height: 100vh;
+
+    background: var(--white);
+
+    padding: 30px 0 38px 0;
+
+    .content {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 0 25px;
+
+        gap: 15px;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+
+            width: 60px;
+            height: 60px;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .avatar>img {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 100px;
+            border: 3px solid rgba(0, 0, 0, 0.20);
+        }
+
+        .login {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
