@@ -1,7 +1,6 @@
-import Image from "next/image";
 
-const BookmarkIcon = () => {
-    return <svg width="18" height="24" viewBox="0 0 18 24" xmlns="http://www.w3.org/2000/svg">
+const BookmarkIcon = ({ className }: { className?: string }) => {
+    return <svg className={className} width="18" height="24" viewBox="0 0 18 24" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M1.8 23.8866C1.37143 24.0696 0.964285 24.0298 0.578571 23.7671C0.192857 23.5045 0 23.121 0 22.6167V2.74559C0 1.99055 0.252 1.34397 0.756 0.805831C1.26 0.267697 1.86514 -0.000912864 2.57143 2.33072e-06H15.4286C16.1357 2.33072e-06 16.7413 0.26907 17.2453 0.807204C17.7493 1.34534 18.0009 1.99147 18 2.74559V22.6167C18 23.1201 17.8071 23.5036 17.4214 23.7671C17.0357 24.0307 16.6286 24.0705 16.2 23.8866L9 20.5919L1.8 23.8866Z"
             fill="currentColor" />

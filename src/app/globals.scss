@@ -12,8 +12,11 @@
   --white: #FFFFFF;
   --blue: #5E7BC7;
   --red: #C75E5E;
+  --gray: #373737;
   --gray-light: #808080;
   --gray-lighter: #C4C4C4;
+  --yellow: #B99844;
+  --aqua: #5EC7A1;
 }
 
 //nextjs
@@ -26,7 +29,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--gray);
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));

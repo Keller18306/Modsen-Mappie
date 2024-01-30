@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 import './styles.scss';
 
 interface ButtonProps {
@@ -7,12 +7,14 @@ interface ButtonProps {
 
     active?: boolean;
     className?: string;
+    onClick?: MouseEventHandler<HTMLDivElement>;
 }
-const Button = ({ icon, active, className }: ButtonProps) => {
+const Button = ({ icon, active, className, onClick }: ButtonProps) => {
     return <div
         className={clsx('button', className, {
-            active: active === undefined ? true : active
+            active: Boolean(active)
         })}
+        onClick={onClick}
     >{icon}</div>;
 }
 

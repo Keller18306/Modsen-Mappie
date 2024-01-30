@@ -7,39 +7,40 @@
     height: 60px;
     border-radius: 6px;
 
-    
-    &.blue>* {
-        color: var(--blue);
-    }
-    
-    &.red>* {
-        color: var(--red);
+    &>* {
+        color: var(--white);
     }
 
-    &.gray>* {
-        color: var(--gray-light);
+    &.blue {
+        background: var(--blue);
     }
-    
-    &:hover,
-    &:not(.active) {
-        border: var(--gray-lighter) 3px solid;
+
+    &.red {
+        background: var(--red);
+    }
+
+    &.gray {
+        background: var(--gray-light);
     }
 
     &.active {
-        &>* {
-            color: var(--white);
+        background: var(--white);
+
+        &.blue>* {
+            color: var(--blue);
         }
 
-        &.blue {
-            background: var(--blue);
+        &.red>* {
+            color: var(--red);
         }
 
-        &.red {
-            background: var(--red);
+        &.gray>* {
+            color: var(--gray-light);
         }
+    }
 
-        &.gray {
-            background: var(--gray-light);
-        }
+    &:hover,
+    &.active {
+        border: var(--gray-lighter) 3px solid;
     }
 }
