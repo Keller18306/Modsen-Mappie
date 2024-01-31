@@ -1,0 +1,85 @@
+.shortCard {
+    display: grid;
+    gap: 10px;
+
+    padding: 20px 30px 23px 20px;
+    gap: 10px;
+
+    border-radius: 10px;
+    border: 3px solid var(--gray-lighter);
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 100px;
+
+        .image {
+            position: relative;
+            display: block;
+
+            width: 120px;
+            height: 100%;
+            border-radius: 10px;
+
+            background: var(--gray-light);
+
+            .badge-list {
+                position: absolute;
+
+                display: flex;
+                justify-content: flex-end;
+
+                gap: 5px;
+
+                margin: 0 8px 8px 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .title {
+            width: 160px;
+
+            font-size: 16px;
+            font-weight: 800;
+
+            word-wrap: break-word;
+        }
+    }
+
+    .card-description {
+        // display: block;
+        height: 45px;
+        width: 300px;
+
+        font-size: 10px;
+        font-weight: 600;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .card-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bookmark {
+            width: 15px;
+            height: 20px;
+
+            color: var(--red);
+        }
+
+        .arrow-left {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

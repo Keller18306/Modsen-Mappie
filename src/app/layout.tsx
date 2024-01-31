@@ -1,6 +1,7 @@
 import Sidebar from "@/ui/Sidebar";
 import type { Metadata } from "next";
 import loadFont from 'next/font/local';
+import Image from "next/image";
 import "./globals.scss";
 
 const montFont = loadFont({
@@ -45,13 +46,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montFont.className} antialiased`}>
-        <div className='flex' style={{ gap: '3px' }}>
+        <div className='flex'>
           <Sidebar login={true} />
 
-
-
-
-          {/* <Image src="/natura.png" width={512} height={512} style={{ width: '100%' }} alt="Natura ahhaahhaha" /> */}
+          <Image src="/natura.png" width={512} height={512} style={{ width: '100%' }} alt="Natura ahhaahhaha" />
           {/* {children} */}
         </div>
       </body>

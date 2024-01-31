@@ -15,8 +15,6 @@
   --gray: #373737;
   --gray-light: #808080;
   --gray-lighter: #C4C4C4;
-  --yellow: #B99844;
-  --aqua: #5EC7A1;
 }
 
 //nextjs
@@ -29,10 +27,11 @@
 }
 
 body {
+  height: 100vh;
+  overflow-y: hidden;
+
   color: var(--gray);
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: black; //debug
 }
 
 @layer utilities {

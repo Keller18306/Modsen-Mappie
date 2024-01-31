@@ -47,8 +47,10 @@ const Sidebar = ({ login }: SidebarProps) => {
         </div>
 
         {activeTab && <div className='sidebar-activeTab'>
-            {activeTab === 'search' && <SearchBar />}
-            {activeTab === 'fave' && <FaveBar />}
+            <div className='content'>
+                {activeTab === 'search' && <SearchBar />}
+                {activeTab === 'fave' && <FaveBar />}
+            </div>
         </div>}
     </div>
 }

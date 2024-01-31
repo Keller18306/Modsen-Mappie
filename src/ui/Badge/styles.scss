@@ -1,0 +1,18 @@
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+
+    &.badge-outlined {
+        border: 1px solid var(--gray-lighter);
+        border-radius: 100px;
+    }
+
+    svg {
+        width: 60%;
+        height: 60%;
+    }
+}
