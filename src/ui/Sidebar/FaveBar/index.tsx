@@ -1,4 +1,5 @@
-import SearchInput from '../../SearchInput';
+import SearchIcon from '@/ui/icons/Search';
+import Input from '../../Input';
 import ShortCard from './ShortCard';
 import './styles.scss';
 
@@ -16,7 +17,7 @@ Du kan vara drabbad.
 
 const FaveBar = () => {
     return <div className='favebar'>
-        <SearchInput placeholder='Место, адрес...' />
+        <Input icon={<SearchIcon className='icon' />} placeholder='Место, адрес...' />
 
         <div className='header'>
             Избранное:

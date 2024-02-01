@@ -13,7 +13,17 @@ import './styles.scss';
 
 type SidebarProps = { login?: boolean }
 const Sidebar = ({ login }: SidebarProps) => {
-    const [activeTab, setActiveTab] = useState<'search' | 'fave'>('fave');
+    const [activeTab, setActiveTab] = useState<'search' | 'fave' | undefined>('search');
+
+    const toggleActiveButton = (value: typeof activeTab) => {
+        setActiveTab(currentValue => {
+            if (currentValue === value) {
+                return;
+            }
+
+            return value;
+        })
+    }
 
     return <div className='sidebar'>
         <div className='sidebar-control'>
@@ -24,13 +34,13 @@ const Sidebar = ({ login }: SidebarProps) => {
 
                 <Button className='blue' icon={<SearchIcon />} active={activeTab === 'search'}
                     onClick={() => {
-                        setActiveTab('search');
+                        toggleActiveButton('search');
                     }}
                 />
 
                 <Button className='red' icon={<BookmarkIcon />} active={activeTab === 'fave'}
                     onClick={() => {
-                        setActiveTab('fave');
+                        toggleActiveButton('fave');
                     }}
                 />
 
@@ -47,7 +57,7 @@ const Sidebar = ({ login }: SidebarProps) => {
         </div>
 
         {activeTab && <div className='sidebar-activeTab'>
-            <div className='content'>
+            <div className='activeTab-content'>
                 {activeTab === 'search' && <SearchBar />}
                 {activeTab === 'fave' && <FaveBar />}
             </div>

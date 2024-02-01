@@ -51,13 +51,12 @@
     .sidebar-activeTab {
         position: relative;
 
-        .content {
+        .activeTab-content {
             position: absolute;
 
             width: 400px;
             height: 100%;
     
-            padding: 25px 25px 0 25px;
             margin-left: 3px;
     
             background: var(--white);

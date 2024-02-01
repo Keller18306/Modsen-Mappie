@@ -49,7 +49,7 @@ export default function RootLayout({
         <div className='flex'>
           <Sidebar login={true} />
 
-          <Image src="/natura.png" width={512} height={512} style={{ width: '100%' }} alt="Natura ahhaahhaha" />
+          {/* <Image src="/natura.png" width={512} height={512} style={{ width: '100%' }} alt="Natura ahhaahhaha" /> */}
           {/* {children} */}
         </div>
       </body>

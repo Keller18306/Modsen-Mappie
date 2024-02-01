@@ -1,7 +1,79 @@
 .searchbar {
-    .header {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: 25px 25px 36px 25px;
+
+    .header-search {
         margin: 35px 0 15px 5px;
         font-size: 20px;
         font-weight: 800;
+    }
+
+    .search-list {
+        border-radius: 10px;
+        border: 3px solid var(--gray-lighter);
+
+        padding: 17px 20px 17px 20px;
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            height: 490px;
+
+            overflow-y: auto;
+
+            .item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+
+                width: 100%;
+
+                .badge {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .text {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .radius-header {
+        margin: 30px 0 15px 0px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .radius-field {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .input {
+            width: 100px;
+            height: 50px;
+        }
+
+        .metric {
+            font-size: 16px;
+            font-weight: 800;
+        }
+    }
+
+    .spacer {
+        flex-grow: 1;
+    }
+
+    .button-search {
+        width: 100%;
     }
 }
