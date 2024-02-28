@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Button from '../Button';
 import Logo from '../Logo';
 import BookmarkIcon from '../icons/Bookmark';
@@ -13,9 +13,9 @@ import './styles.scss';
 
 type SidebarProps = { login?: boolean }
 const Sidebar = ({ login }: SidebarProps) => {
-    const [activeTab, setActiveTab] = useState<'search' | 'fave' | undefined>('search');
+    const [activeTab, setActiveTab] = useState<'search' | 'fave' | undefined>();
 
-    const toggleActiveButton = (value: typeof activeTab) => {
+    const toggleActiveButton = useCallback((value: typeof activeTab) => {
         setActiveTab(currentValue => {
             if (currentValue === value) {
                 return;
@@ -23,7 +23,7 @@ const Sidebar = ({ login }: SidebarProps) => {
 
             return value;
         })
-    }
+    }, []);
 
     return <div className='sidebar'>
         <div className='sidebar-control'>

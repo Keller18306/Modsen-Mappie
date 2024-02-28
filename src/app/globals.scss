@@ -27,11 +27,15 @@
 }
 
 body {
-  // height: 100vh;
+  height: 100vh;
   // overflow-y: hidden;
 
   color: var(--gray);
   background: black; //debug
+}
+
+main.map {
+  width: 100%;
 }
 
 @layer utilities {
